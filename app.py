@@ -28,4 +28,5 @@ def predict():
     input_data = np.array([[bed, bath, loc, size, status, face, Type]])
     prediction = model.predict(input_data)[0]
     return render_template('index.html', prediction=prediction)
-app.run(debug=True, use_reloader=True)
+if __name__ == 'main':
+    app.run()
